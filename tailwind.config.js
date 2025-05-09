@@ -78,7 +78,11 @@ module.exports = {
 			fontFamily: {
 				sans: ['var(--font-geist-sans)'],
 				mono: ['var(--font-geist-mono)']
-			}
+			},
+			backdropBlur: {
+				sm: '4px',
+				md: '8px',
+			}			  
 		}
 	},
 	plugins: [require('tailwindcss-animate')]
