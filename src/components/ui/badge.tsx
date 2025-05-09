@@ -3,18 +3,24 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const badgeVariants = cva(
-  'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold font-mono text-nowrap transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
+  'inline-flex items-center rounded-full px-3 py-1 text-xs font-medium text-nowrap transition-all duration-200 ease-in-out transform shadow-sm',
   {
     variants: {
       variant: {
         default:
-          'border-transparent bg-primary/80 text-primary-foreground hover:bg-primary/60 hover:shadow-md hover:scale-105',
+          'bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-md dark:hover:bg-primary/80',
         secondary:
-          'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/60 hover:shadow-md hover:scale-105',
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:scale-105 hover:shadow-md dark:hover:bg-secondary/60',
         destructive:
-          'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80 hover:shadow-md hover:scale-105',
+          'bg-destructive text-destructive-foreground hover:bg-destructive/80 hover:scale-105 hover:shadow-md',
         outline:
-          'border border-border bg-muted text-muted-foreground hover:bg-muted/80 dark:bg-muted/40 dark:text-white dark:border-muted hover:shadow-md hover:scale-105'
+          'border border-border bg-muted text-muted-foreground hover:bg-muted/70 hover:scale-105 hover:shadow-md dark:bg-white/10 dark:text-white dark:border-white/30 dark:hover:bg-white/20',
+        info:
+          'bg-blue-500 text-white hover:bg-blue-600 hover:scale-105 hover:shadow-md',
+        success:
+          'bg-green-500 text-white hover:bg-green-600 hover:scale-105 hover:shadow-md',
+        warning:
+          'bg-yellow-400 text-black hover:bg-yellow-500 hover:scale-105 hover:shadow-md'
       }
     },
     defaultVariants: {
@@ -29,7 +35,10 @@ export interface BadgeProps
 
 function Badge({ className, variant, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div
+      className={cn(badgeVariants({ variant }), className)}
+      {...props}
+    />
   )
 }
 
