@@ -13,33 +13,35 @@ import { RESUME_DATA } from '@/data/resume-data'
 export default function Page() {
 	return (
 		<main className='container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16'>
-			<section className='mx-auto w-full max-w-2xl space-y-8 bg-background text-foreground print:space-y-6'>
-				<div className='flex items-center justify-between'>
-					<div className='flex-1 space-y-1.5'>
-						<h1 className='text-2xl font-bold'>{data.name}</h1>
-						<p className='max-w-md text-pretty font-mono text-sm text-muted-foreground'>
+			<section className='mx-auto w-full max-w-4xl space-y-8 bg-background text-foreground print:space-y-6'>
+				<div className='flex flex-col-reverse items-center gap-4 sm:flex-row sm:justify-between'>
+					<div className='flex-1 space-y-3 text-center sm:text-left'>
+						<h1 className='text-4xl font-bold tracking-tight sm:text-5xl'>{data.name}</h1>
+						<p className='w-full text-pretty font-mono text-base text-muted-foreground md:w-4/5'>
 							{data.about}
 						</p>
-						<p className='max-w-md items-center text-pretty font-mono text-xs text-muted-foreground'>
+						<div className='flex items-center justify-center gap-x-2 font-mono text-sm text-muted-foreground sm:justify-start'>
 							<a
-								className='inline-flex gap-x-1.5 align-baseline leading-none hover:underline'
+								className='inline-flex items-center gap-x-1.5 hover:text-foreground hover:underline'
 								href={data.locationLink}
 								target='_blank'
 								rel='noreferrer'
 							>
-								<GlobeIcon className='size-3' />
+								<GlobeIcon className='size-4' />
 								{data.location}
 							</a>
-						</p>
+						</div>
 
-						<ButtonLink data={data} />
+						<div className='flex justify-center gap-2 pt-1 sm:justify-start'>
+							<ButtonLink data={data} />
+						</div>
 					</div>
 
-					<a href='https://github.com/NotHarshhaa' target='_blank' rel='noopener noreferrer'>
-					<Avatar  className='size-28 border' active status="online">
-                        <AvatarImage src={RESUME_DATA.avatar} alt={RESUME_DATA.name} />
-                        <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-                    </Avatar>
+					<a href='https://github.com/NotHarshhaa' target='_blank' rel='noopener noreferrer' className='group'>
+						<Avatar className='size-32 border-2 border-border transition-all duration-300 group-hover:scale-105 sm:size-40' active status="online">
+							<AvatarImage src={RESUME_DATA.avatar} alt={RESUME_DATA.name} className='object-cover' />
+							<AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+						</Avatar>
 					</a>
 				</div>
 

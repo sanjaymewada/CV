@@ -6,67 +6,73 @@ import { type ResumeData } from '@/types'
 export function ButtonLink({ data }: { data: ResumeData }) {
 	const linkData = [
 		{
-			url: data.personalWebsiteUrl?.url,
-			icon: AppWindowIcon,
-			name: data.personalWebsiteUrl?.name,
-			type: 'website'
+			name: data.personalWebsiteUrl.name,
+			url: data.personalWebsiteUrl.url,
+			icon: AppWindowIcon
 		},
 		{
-			url: `mailto:${data.contact.email?.at}`,
-			icon: MailIcon,
-			name: data.contact.email?.name,
-			type: 'email'
+			name: data.contact.email.name,
+			url: `mailto:${data.contact.email.at}`,
+			icon: MailIcon
 		},
 		{
-			url: `tel:${data.contact.tel?.phoneNumber}`,
-			icon: PhoneIcon,
-			name: data.contact.tel?.name,
-			type: 'phone'
+			name: data.contact.tel.name,
+			url: `tel:${data.contact.tel.phoneNumber}`,
+			icon: PhoneIcon
 		},
-		...data.contact.social.map((social) => ({
-			url: social.url,
-			icon: social.icon,
-			name: social.name,
-			type: 'social'
-		})),
 		{
-			url: data.contact.link?.url,
-			icon: LinkIcon,
-			name: data.contact.link?.name,
-			type: 'other links'
+			name: data.contact.link.name,
+			url: data.contact.link.url,
+			icon: LinkIcon
 		}
 	]
 
 	return (
-		<section>
-			<div className='flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden'>
-				{linkData
-					.filter((link) => link.url)
-					.map((link, index) => (
-						<Tooltip key={index}>
-							<TooltipTrigger asChild>
-								<Button className='size-8' variant='outline' size='icon' asChild>
-									<a href={link.url} target='_blank' rel='noreferrer' aria-label={link.name}>
-										<link.icon className='size-4' />
-									</a>
-								</Button>
-							</TooltipTrigger>
-							<TooltipContent side='bottom'>
-								<p className='text-xs'>{link.name}</p>
-							</TooltipContent>
-						</Tooltip>
-					))}
-			</div>
-
-			<div className='hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex'>
-				{linkData
-					.filter((link) => ['website', 'email', 'phone'].includes(link.type))
-					.map((link, index) => (
-						<a key={index} href={link.url} target='_blank' rel='noreferrer'>
-							<span className='underline'>{link.url}</span>
-						</a>
-					))}
-			</div>
-		</section>
+		<div className='flex flex-wrap gap-2'>
+			{linkData.map((link, index) => (
+				<Tooltip key={index}>
+					<TooltipTrigger asChild>
+						<Button 
+							className='size-10 transition-all duration-300 hover:scale-110' 
+							variant='outline' 
+							size='icon'
+						>
+							<a 
+								href={link.url} 
+								target='_blank' 
+								rel='noreferrer' 
+								aria-label={link.name}
+								className='flex items-center justify-center'
+							>
+								<link.icon className='size-5' />
+							</a>
+						</Button>
+					</TooltipTrigger>
+					<TooltipContent>{link.name}</TooltipContent>
+				</Tooltip>
+			))}
+			{data.contact.social.map((social, index) => (
+				<Tooltip key={`social-${index}`}>
+					<TooltipTrigger asChild>
+						<Button 
+							className='size-10 transition-all duration-300 hover:scale-110' 
+							variant='outline' 
+							size='icon'
+						>
+							<a
+								href={social.url}
+								target='_blank'
+								rel='noreferrer'
+								aria-label={social.name}
+								className='flex items-center justify-center'
+							>
+								<social.icon className='size-5' />
+							</a>
+						</Button>
+					</TooltipTrigger>
+					<TooltipContent>{social.name}</TooltipContent>
+				</Tooltip>
+			))}
+		</div>
 	)
 }

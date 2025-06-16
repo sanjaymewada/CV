@@ -10,7 +10,7 @@ export const RESUME_DATA = {
     summary: `I specialize in DevOps, Cloud Computing, and Infrastructure Automation, with hands-on expertise in tools like Kubernetes, Terraform, Docker, and CI/CD pipelines. I design and implement cloud-native architectures that are scalable, secure, and resilient with a strong focus on efficiency and reliability.
     As an open-source contributor, I actively collaborate with the global tech community, sharing solutions and tackling real-world infrastructure challenges together.
     I'm driven by a mission to bridge development and operations through automation, helping teams ship faster, safer, and smarter in the cloud.`,
-	avatar: '/assets/avatar.jpg',
+	avatar: '/assets/avatar.png',
 	personalWebsiteUrl: {
 		name: 'Portfolio',
 		url: 'https://notharshhaa.site'
