@@ -12,7 +12,8 @@ module.exports = {
 		'plugin:@typescript-eslint/stylistic-type-checked',
 		'plugin:react-hooks/recommended',
 		'plugin:react/recommended',
-		'plugin:react/jsx-runtime'
+		'plugin:react/jsx-runtime',
+		'next/core-web-vitals'
 	],
 	ignorePatterns: [
 		'dist',

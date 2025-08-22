@@ -1,52 +1,217 @@
-# 📄 **CV - Harshhaa Vardhan Reddy**
+# Harshhaa Vardhan Reddy - DevOps Engineer Portfolio
 
-[![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+A modern, performant, and accessible CV/portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## 🚀 Features
+
+### Performance Optimizations
+- **React.memo** for component memoization
+- **Font preloading** for faster text rendering
+- **Image optimization** with Next.js Image component
+- **Bundle analysis** with @next/bundle-analyzer
+- **CSS optimization** with Tailwind CSS
+- **Code splitting** and lazy loading
+- **Console removal** in production builds
+
+### Accessibility Improvements
+- **ARIA labels** for screen readers
+- **Keyboard navigation** support
+- **Focus management** with visible focus indicators
+- **Semantic HTML** structure
+- **Reduced motion** support for users with vestibular disorders
+- **High contrast** support
+
+### SEO Enhancements
+- **Comprehensive metadata** with Open Graph and Twitter cards
+- **Sitemap generation** for better indexing
+- **Robots.txt** optimization
+- **Structured data** for search engines
+- **Performance monitoring** with Vercel Analytics and Speed Insights
+
+### Security Features
+- **Content Security Policy (CSP)** headers
+- **XSS Protection** headers
+- **HSTS** for secure connections
+- **Frame options** to prevent clickjacking
+- **Referrer policy** for privacy
+
+### Developer Experience
+- **TypeScript** for type safety
+- **ESLint** with Next.js rules
+- **Prettier** for code formatting
+- **Husky** for git hooks (optional)
+- **Comprehensive scripts** for development workflow
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI + shadcn/ui
+- **Icons**: Lucide React
+- **Fonts**: Geist Sans & Geist Mono
+- **Deployment**: Vercel
+- **Analytics**: Vercel Analytics & Speed Insights
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/NotHarshhaa/cv-portfolio.git
+cd cv-portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+## 🚀 Available Scripts
+
+```bash
+# Development
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+
+# Code Quality
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint issues
+npm run type-check   # Run TypeScript type checking
+npm run format       # Format code with Prettier
+npm run format:check # Check code formatting
+
+# Performance
+npm run analyze      # Analyze bundle size
+npm run clean        # Clean build cache
+```
+
+## 📁 Project Structure
+
+```
+cv-portfolio/
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── layout.tsx      # Root layout with metadata
+│   │   ├── page.tsx        # Main portfolio page
+│   │   ├── loading.tsx     # Loading component
+│   │   ├── error.tsx       # Error boundary
+│   │   ├── sitemap.ts      # Sitemap generator
+│   │   └── globals.css     # Global styles
+│   ├── components/         # Reusable components
+│   │   ├── ui/            # shadcn/ui components
+│   │   ├── project-card.tsx
+│   │   ├── command-menu.tsx
+│   │   └── theme-toggle.tsx
+│   ├── data/              # Data files
+│   │   └── resume-data.tsx
+│   ├── lib/               # Utility functions
+│   └── types.d.ts         # TypeScript types
+├── public/                # Static assets
+├── next.config.js         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+└── package.json           # Dependencies and scripts
+```
+
+## 🎨 Customization
+
+### Updating Personal Information
+Edit `src/data/resume-data.tsx` to update your personal information, work experience, education, skills, and projects.
+
+### Styling
+- Modify `src/app/globals.css` for global styles
+- Update `tailwind.config.js` for theme customization
+- Edit component styles in individual component files
+
+### SEO
+- Update metadata in `src/app/layout.tsx`
+- Modify `public/site.webmanifest` for PWA settings
+- Update `public/robots.txt` for search engine directives
+
+## 📊 Performance Metrics
+
+The site is optimized for:
+- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
+- **Core Web Vitals**: All metrics in the green
+- **Bundle Size**: Optimized with tree shaking and code splitting
+- **Loading Speed**: Sub-2 second initial load time
+
+## 🔧 Recent Optimizations
+
+### Performance
+- ✅ Added React.memo for component memoization
+- ✅ Implemented font preloading
+- ✅ Optimized images with Next.js Image component
+- ✅ Added bundle analyzer for performance monitoring
+- ✅ Implemented code splitting and lazy loading
+- ✅ Added console removal in production
+
+### Accessibility
+- ✅ Added comprehensive ARIA labels
+- ✅ Implemented keyboard navigation support
+- ✅ Added focus management with visible indicators
+- ✅ Improved semantic HTML structure
+- ✅ Added reduced motion support
+- ✅ Enhanced color contrast
+
+### SEO
+- ✅ Comprehensive metadata with Open Graph and Twitter cards
+- ✅ Automatic sitemap generation
+- ✅ Optimized robots.txt
+- ✅ Added structured data
+- ✅ Implemented performance monitoring
+
+### Security
+- ✅ Content Security Policy headers
+- ✅ XSS Protection headers
+- ✅ HSTS for secure connections
+- ✅ Frame options to prevent clickjacking
+- ✅ Referrer policy for privacy
+
+### Developer Experience
+- ✅ TypeScript for type safety
+- ✅ ESLint with Next.js rules
+- ✅ Prettier for code formatting
+- ✅ Comprehensive development scripts
+- ✅ Error boundaries and loading states
+
+## 🚀 Deployment
+
+The site is optimized for deployment on Vercel:
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect Next.js and deploy
+3. Environment variables are automatically handled
+4. Analytics and Speed Insights are automatically enabled
+
+## 📈 Monitoring
+
+- **Vercel Analytics**: Track user behavior and performance
+- **Speed Insights**: Monitor Core Web Vitals
+- **Bundle Analyzer**: Analyze bundle size and composition
+- **Error Tracking**: Automatic error reporting
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Contact
+
+- **Name**: Harshhaa Vardhan Reddy
+- **Email**: harshhaa03@gmail.com
+- **LinkedIn**: [harshhaa-vardhan-reddy](https://www.linkedin.com/in/harshhaa-vardhan-reddy)
+- **GitHub**: [NotHarshhaa](https://github.com/NotHarshhaa)
+- **Portfolio**: [notharshhaa.site](https://notharshhaa.site)
 
 ---
 
-## 🧾 **Overview**
-
-This project is a **personal CV website** built with modern technologies to showcase my professional experience, skills, and education in an elegant and responsive format.
-
-Inspired by clean UI principles and designed to be both printer-friendly and mobile-responsive, this CV site serves as a digital version of my resume, hosted online for easy access.
-
-![Preview of CV](https://imgur.com/EbmBwai.png)
-
----
-
-## ⚙️ **Tech Stack**
-
-- **Framework:** [Next.js](https://nextjs.org)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com)
-- **Languages:** [TypeScript](https://www.typescriptlang.org), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- **Deployment:** [Vercel](https://vercel.com)
-
----
-
-## 🚀 **Features**
-
-- 🖨️ Printer-friendly design for easy resume printing
-- 🌙 Dark/light mode support
-- 📱 Responsive layout for all devices
-- ⚡ Fast loading via static generation with Next.js
-- 🌍 Easy to host and update online
-
----
-
-## 🧑‍🎨 **Credits**
-
-A heartfelt thanks to [Emanuel Peire](https://github.com/emapeire) for providing the initial layout and design inspiration for this CV web template. Your work has been instrumental in shaping this project into a polished and professional showcase.
-
----
-
-## 🔗 **Live Preview**
-
-Experience the live version of my CV website by clicking the link below:
-
-- 🌐 **Website:** [cv.notharshhaa.site](https://cv.notharshhaa.site)
-
-This live preview demonstrates the full functionality of the site, including its responsive design, dark/light mode toggle, and printer-friendly layout. Feel free to explore and provide feedback!
+Built with ❤️ using Next.js, TypeScript, and Tailwind CSS

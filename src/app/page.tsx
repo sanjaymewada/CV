@@ -1,3 +1,4 @@
+import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -9,6 +10,10 @@ import { GlobeIcon } from 'lucide-react'
 import { data } from '@/constants'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { RESUME_DATA } from '@/data/resume-data'
+
+// Memoized components for better performance
+const MemoizedProjectCard = React.memo(ProjectCard)
+const MemoizedButtonLink = React.memo(ButtonLink)
 
 export default function Page() {
 	return (
@@ -22,22 +27,29 @@ export default function Page() {
 						</p>
 						<div className='flex items-center justify-center gap-x-2 font-mono text-sm text-muted-foreground sm:justify-start'>
 							<a
-								className='inline-flex items-center gap-x-1.5 hover:text-foreground hover:underline'
+								className='inline-flex items-center gap-x-1.5 hover:text-foreground hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded'
 								href={data.locationLink}
 								target='_blank'
 								rel='noreferrer'
+								aria-label={`View ${data.location} on Google Maps`}
 							>
-								<GlobeIcon className='size-4' />
+								<GlobeIcon className='size-4' aria-hidden="true" />
 								{data.location}
 							</a>
 						</div>
 
 						<div className='flex justify-center gap-2 pt-1 sm:justify-start'>
-							<ButtonLink data={data} />
+							<MemoizedButtonLink data={data} />
 						</div>
 					</div>
 
-					<a href='https://github.com/NotHarshhaa' target='_blank' rel='noopener noreferrer' className='group'>
+					<a 
+						href='https://github.com/NotHarshhaa' 
+						target='_blank' 
+						rel='noopener noreferrer' 
+						className='group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full'
+						aria-label="Visit GitHub profile"
+					>
 						<Avatar className='size-32 border-2 border-border transition-all duration-300 group-hover:scale-105 sm:size-40' active status="online">
 							<AvatarImage src={RESUME_DATA.avatar} alt={RESUME_DATA.name} className='object-cover' />
 							<AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
@@ -58,10 +70,11 @@ export default function Page() {
 								<h3 className='text-base inline-flex items-center gap-x-1 font-semibold leading-none'>
 									{work.link ? (
 										<a
-											className='hover:underline'
+											className='hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded'
 											href={work.link}
 											target='_blank'
 											rel='noreferrer'
+											aria-label={`Visit ${work.company} website`}
 										>
 											{work.company}
 										</a>
@@ -83,11 +96,11 @@ export default function Page() {
 								<CardContent key={index} className='mt-2 mb-4 text-xs'>
 									<div className='flex flex-col md:flex-row md:items-center justify-between gap-x-2 text-sm'>
 										<h4 className='font-mono text-primary'>{job.title}</h4>
-										<time className='tabular-nums text-muted-foreground'>
+										<time className='tabular-nums text-muted-foreground' dateTime={`${job.start}/${job.end}`}>
 											{job.start} - {job.end}
 										</time>
 									</div>
-									<ul className='mt-2'>
+									<ul className='mt-2 space-y-1'>
 										{job.description.map((item, index) => (
 											<li key={index} className='mb-1'>
 												• {item}
@@ -110,11 +123,11 @@ export default function Page() {
 							<CardContent className='mt-2 mb-4 text-xs'>
 								<div className='flex flex-col md:flex-row md:items-center justify-between gap-x-2 text-sm'>
 									<h4 className='font-mono text-primary'>{education.degree}</h4>
-									<time className='tabular-nums text-muted-foreground'>
+									<time className='tabular-nums text-muted-foreground' dateTime={`${education.start}/${education.end}`}>
 										{education.start} - {education.end}
 									</time>
 								</div>
-								<ul className='mt-2'>
+								<ul className='mt-2 space-y-1'>
 									{education.description.map((item, index) => (
 										<li key={index} className='mb-1'>
 											• {item}
@@ -139,7 +152,7 @@ export default function Page() {
 					<h2 className='text-xl font-bold'>Projects</h2>
 					<div className='-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3'>
 						{data.projects.map((project) => (
-							<ProjectCard
+							<MemoizedProjectCard
 								key={project.title}
 								title={project.title}
 								description={project.description}
