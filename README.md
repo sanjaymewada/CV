@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Harshhaa Vardhan Reddy - DevOps Engineer Portfolio
 
 A modern, performant, and accessible CV/portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
@@ -215,3 +216,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
+=======
+# Resume
+>>>>>>> 949b864c4450d0d9668a9da721f9ed3998108c87
