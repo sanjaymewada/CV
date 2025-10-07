@@ -180,9 +180,6 @@ export const RESUME_DATA = {
 		'VS Code'
 	],	  
 	projects: [
-		
-		
-	
 		{
 		  title: 'Sample Flask App Full Pipeline',
 		  techStack: ['Python','k8s'],
@@ -215,11 +212,10 @@ export const RESUME_DATA = {
 
 		{
 		  title: 'Two-tier-flask-app',
-		  techStack: ['Python + Flask',mysql],
+		  techStack: ['Python + Flask','mysql'],
 		  description: 'deploy python flask project on Docker, Docker Compose.',
 		  link: {
-			label: 'two-tier-flask-app
-',
+			label: 'two-tier-flask-app',
 			href: 'https://github.com/LondheShubham153/two-tier-flask-app.git'
 		  }
 		},
@@ -229,4 +225,5 @@ export const RESUME_DATA = {
 		
 	]			
 }
+
 
