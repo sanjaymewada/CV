@@ -182,7 +182,7 @@ export const RESUME_DATA = {
 	projects: [
 		{
 		  title: 'Sample Flask App Full Pipeline',
-		  techStack: ['Python','k8s'GitHub (Code)','Docker (Containerization)','Jenkins (CI)','SonarQube (Quality)','Trivy (Filesystem Scan)',
+		  techStack: ['Python','k8s','GitHub (Code)','Docker (Containerization)','Jenkins (CI)','SonarQube (Quality)','Trivy (Filesystem Scan)',
 'ArgoCD (CD)','Redis (Caching)'],
 Helm (Monitoring using grafana and prometheus)],
 		  description: 'deploy python flask project on kubeadm using  jenkin Ci  pipeline  and Argocd CD.',
@@ -228,6 +228,7 @@ Helm (Monitoring using grafana and prometheus)],
 		
 	]			
 }
+
 
 
 
