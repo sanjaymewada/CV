@@ -180,6 +180,74 @@ export const RESUME_DATA = {
 		'VS Code'
 	],	  
 	projects: [
+
+		{
+		  title: 'Static Website Hosting with S3, CloudFront & Route 53',
+		  techStack: ['S3','CloudFront','Route 53','IAM'],
+		  description: 'Deployed and hosted a fully static website using Amazon S3, integrated with CloudFront for global content delivery and Route 53 for DNS management.and Configured a custom domain with SSL/TLS (HTTPS) using ACM and CloudFront for secure access.also Ensured secure access control using IAM policies and S3 bucket permissions..',
+		  link: {
+			label: '',
+			href: ''
+		  }
+		},
+
+		
+		{
+		  title: 'Highly Available Web App with Auto Scaling & Load Balancer',
+		  techStack: ['EC2','ALB','Auto Scaling','Route 53','CloudWatch','SNS'],
+		  description: 'Launched a scalable web application using EC2 instances behind an Application Load Balancer (ALB).and Implemented Auto Scaling Groups for dynamic resource management.and Integrated Route 53 for DNS resolution, with CloudWatch, SNS, and SQS for monitoring and decoupled alerting.',
+		  link: {
+			label: '',
+			href: ''
+		  }
+		},
+
+		{
+		  title: 'Infrastructure as Code: EC2 Launch with CloudFormation',
+		  techStack: ['EC2','ALB','Auto Scaling','Route 53','CloudWatch','SNS'],
+		  description: 'Designed a CloudFormation YAML template to launch both Linux and Windows EC2 instances.and Implemented User Data scripts to automatically install Docker on Linux and IIS on Windows during instance provisioning..',
+		  link: {
+			label: '',
+			href: ''
+		  }
+		},
+
+
+		{
+		  title: 'CI/CD with AWS CodePipeline (Fully Managed Deployment)',
+		  techStack: ['CodePipeline','CodeCommit','CodeBuild','CodeDeploy','EC2','IAM'],
+		  description: 'Built a fully managed CI/CD pipeline using AWS CodePipeline, integrating CodeCommit, CodeBuild, and CodeDeploy to deploy applications on EC2.and Ensured smooth build, test, and deployment stages with version control and rollback support..',
+		  link: {
+			label: '',
+			href: ''
+		  }
+		},
+
+		{
+		  title: 'CI/CD full devsecops  CodePipeline (Fully automated Deployment)',
+		  techStack: ['vscode','Git(vcs)','GitHub (Code)','Docker (Containerization)','Dockerhub Registery','Terraform','Ansible','Jenkins (CI)','SonarQube (Quality)','Trivy (Filesystem Scan)',
+'ArgoCD (CD)','Email Notification','Helm (Monitoring using grafana and prometheus)'],
+		  description: 'Built a fully Automated CI/CD pipeline using DevSecOps Pipeline:
+VS Code → Git → GitHub → Jenkins (CI) → Docker + DockerHub → SonarQube + Trivy (Scan) → Terraform + Ansible → ArgoCD + Helm → EKS → Prometheus + Grafana (Monitoring) → Email Alerts.',
+		  link: {
+			label: '',
+			href: ''
+		  }
+		},
+
+			{
+		  title: 'Lambda Scheduled EC2 Start/Stop Automation)',
+		  techStack: ['Lambda', 'EC2', 'CloudWatch Events', 'IAM',' Python (Boto3)'],
+		  description: 'Automated scheduled start/stop of EC2 instances using AWS Lambda (Python), triggered by CloudWatch Events to reduce costs during non-peak hours..',
+		  link: {
+			label: '',
+			href: ''
+		  }
+		},
+		
+		
+		
+		
 		{
 		  title: 'Sample Flask App Full Pipeline',
 		  techStack: ['Python','k8s','GitHub (Code)','Docker (Containerization)','Jenkins (CI)','SonarQube (Quality)','Trivy (Filesystem Scan)',
@@ -227,6 +295,7 @@ export const RESUME_DATA = {
 		
 	]			
 }
+
 
 
 
