@@ -27,7 +27,7 @@ export const RESUME_DATA = {
     },
     tel: {
       name: 'Phone',
-      value: '+9179962143'
+      phoneNumber: '+9179962143' // ✅ corrected to match ContactTel type
     },
     social: [
       {
@@ -78,7 +78,7 @@ export const RESUME_DATA = {
             'Progressed from Server/Network support to full Cloud DevOps responsibilities, mastering automation, containerization, and monitoring.',
             'Worked as a Server Administrator and IT Support, managing Linux/Windows servers, IIS, and troubleshooting issues to ensure high system uptime.',
             'Skilled in server management (ADDS, DNS,IIS), virtualization (VMware, Hyper-V), and cloud technologies (AWS).',
-            'Automated cloud infrastructure provisioning using Terraform and Ansible across AWS environments, reducing manual efforts',
+            'Automated cloud infrastructure provisioning using Terraform and Ansible across AWS environments, reducing manual efforts.',
             'Implemented CI/CD pipelines for both on-premises and cloud environments using Jenkins and AWS DevOps, accelerating software delivery.',
             'Managed Kubernetes clusters and containerized applications with Docker and Helm charts.',
             'Monitored and optimized system performance with Prometheus, Grafana.',
@@ -144,25 +144,29 @@ export const RESUME_DATA = {
     {
       title: 'Static Website Hosting with S3, CloudFront & Route 53',
       techStack: ['S3', 'CloudFront', 'Route 53', 'IAM'],
-      description: 'Deployed and hosted a fully static website using Amazon S3, integrated with CloudFront for global content delivery and Route 53 for DNS management. Configured a custom domain with SSL/TLS (HTTPS) using ACM and CloudFront for secure access. Ensured secure access control using IAM policies and S3 bucket permissions.',
+      description:
+        'Deployed and hosted a fully static website using Amazon S3, integrated with CloudFront for global content delivery and Route 53 for DNS management. Configured a custom domain with SSL/TLS (HTTPS) using ACM and CloudFront for secure access. Ensured secure access control using IAM policies and S3 bucket permissions.',
       link: { label: '', href: '' }
     },
     {
       title: 'Highly Available Web App with Auto Scaling & Load Balancer',
       techStack: ['EC2', 'ALB', 'Auto Scaling', 'Route 53', 'CloudWatch', 'SNS'],
-      description: 'Launched a scalable web application using EC2 instances behind an Application Load Balancer (ALB). Implemented Auto Scaling Groups for dynamic resource management. Integrated Route 53 for DNS resolution, with CloudWatch, SNS, and SQS for monitoring and decoupled alerting.',
+      description:
+        'Launched a scalable web application using EC2 instances behind an Application Load Balancer (ALB). Implemented Auto Scaling Groups for dynamic resource management. Integrated Route 53 for DNS resolution, with CloudWatch, SNS, and SQS for monitoring and decoupled alerting.',
       link: { label: '', href: '' }
     },
     {
       title: 'Automated EC2 Infrastructure with CloudFormation',
       techStack: ['CloudFormation', 'EC2', 'ALB', 'Auto Scaling', 'IAM', 'User Data', 'Linux', 'Windows'],
-      description: 'Created a single CloudFormation YAML template to launch both Linux and Windows EC2 instances. Integrated ALB and Auto Scaling for high availability. Used User Data to auto-install Docker on Linux and IIS on Windows. IAM roles and security groups were defined within the template for secure access. Designed the stack to be reusable across environments with parameters and mappings.',
+      description:
+        'Created a single CloudFormation YAML template to launch both Linux and Windows EC2 instances. Integrated ALB and Auto Scaling for high availability. Used User Data to auto-install Docker on Linux and IIS on Windows. IAM roles and security groups were defined within the template for secure access. Designed the stack to be reusable across environments with parameters and mappings.',
       link: { label: '', href: '' }
     },
     {
       title: 'CI/CD with AWS CodePipeline (Fully Managed Deployment)',
       techStack: ['CodePipeline', 'CodeCommit', 'CodeBuild', 'CodeDeploy', 'EC2', 'IAM'],
-      description: 'Built a fully managed CI/CD pipeline using AWS CodePipeline, integrating CodeCommit, CodeBuild, and CodeDeploy to deploy applications on EC2. Ensured smooth build, test, and deployment stages with version control and rollback support.',
+      description:
+        'Built a fully managed CI/CD pipeline using AWS CodePipeline, integrating CodeCommit, CodeBuild, and CodeDeploy to deploy applications on EC2. Ensured smooth build, test, and deployment stages with version control and rollback support.',
       link: { label: '', href: '' }
     },
     {
@@ -172,13 +176,15 @@ export const RESUME_DATA = {
         'Terraform', 'Ansible', 'Jenkins (CI)', 'SonarQube (Quality)', 'Trivy (Filesystem Scan)',
         'ArgoCD (CD)', 'Email Notification', 'Helm (Monitoring using grafana and prometheus)'
       ],
-      description: 'Built a fully automated CI/CD pipeline using DevSecOps Pipeline: VS Code → Git → GitHub → Jenkins (CI) → Docker + DockerHub → SonarQube + Trivy (Scan) → Terraform + Ansible → ArgoCD + Helm → EKS → Prometheus + Grafana (Monitoring) → Email Alerts.',
+      description:
+        'Built a fully automated CI/CD pipeline using DevSecOps Pipeline: VS Code → Git → GitHub → Jenkins (CI) → Docker + DockerHub → SonarQube + Trivy (Scan) → Terraform + Ansible → ArgoCD + Helm → EKS → Prometheus + Grafana (Monitoring) → Email Alerts.',
       link: { label: '', href: '' }
     },
     {
       title: 'Lambda Scheduled EC2 Start/Stop Automation',
       techStack: ['Lambda', 'EC2', 'CloudWatch Events', 'IAM', 'Python (Boto3)'],
-      description: 'Automated scheduled start/stop of EC2 instances using AWS Lambda (Python), triggered by CloudWatch Events to reduce costs during non-peak hours.',
+      description:
+        'Automated scheduled start/stop of EC2 instances using AWS Lambda (Python), triggered by CloudWatch Events to reduce costs during non-peak hours.',
       link: { label: '', href: '' }
     },
     {
@@ -188,26 +194,39 @@ export const RESUME_DATA = {
         'SonarQube (Quality)', 'Trivy (Filesystem Scan)', 'ArgoCD (CD)', 'Redis (Caching)',
         'Helm (Monitoring using grafana and prometheus)'
       ],
-      description: 'Deployed Python Flask project on kubeadm using Jenkins CI pipeline and ArgoCD CD.',
+      description:
+        'Deployed Python Flask project on kubeadm using Jenkins CI pipeline and ArgoCD CD.',
       link: { label: 'Full Jenkins Pipeline', href: 'https://github.com/sanjaymewada/fullpipeline' }
     },
     {
       title: 'Prescripto - Doctor Appointment Web App',
       techStack: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
-      description: 'Created Dockerfile and docker-compose and ran in Docker Desktop.',
-      link: { label: 'Prescripto', href: 'https://github.com/sanjaymewada/prescripto_full-stack_doctor_appointment_app.git' }
+      description:
+        'Created Dockerfile and docker-compose and ran in Docker Desktop.',
+      link: {
+        label: 'Prescripto',
+        href: 'https://github.com/sanjaymewada/prescripto_full-stack_doctor_appointment_app.git'
+      }
     },
     {
       title: 'Expenses-Tracker-WebApp',
       techStack: ['Java', 'Spring boot', 'Spring MVC', 'Spring Security', 'Spring Data (JPA)', 'MySQL', 'Thymeleaf', 'Bootstrap'],
-      description: 'Forked the project and ran it in local Docker Desktop environment.',
-      link: { label: 'Expenses-Tracker', href: 'https://github.com/sanjaymewada/Expenses-Tracker-WebApp.git' }
+      description:
+        'Forked the project and ran it in local Docker Desktop environment.',
+      link: {
+        label: 'Expenses-Tracker',
+        href: 'https://github.com/sanjaymewada/Expenses-Tracker-WebApp.git'
+      }
     },
     {
       title: 'Two-tier-flask-app',
       techStack: ['Python + Flask', 'MySQL'],
-      description: 'Deployed Python Flask project on Docker, Docker Compose.',
-      link: { label: 'two-tier-flask-app', href: 'https://github.com/sanjaymewada/two-tier-flask-app.git' }
+      description:
+        'Deployed Python Flask project on Docker, Docker Compose.',
+      link: {
+        label: 'two-tier-flask-app',
+        href: 'https://github.com/sanjaymewada/two-tier-flask-app.git'
+      }
     }
   ]
 }
