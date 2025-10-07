@@ -75,9 +75,9 @@ export const RESUME_DATA = {
 		  'Worked as a Server Administrator and IT Support, managing Linux/Windows servers, IIS, and troubleshooting issues to ensure high system uptime.',
           'Skilled in server management (ADDS, DNS,IIS), virtualization (VMware, Hyper-V), and cloud technologies (AWS).',
           'Automated cloud infrastructure provisioning using Terraform and Ansible across AWS environments, reducing manual efforts',
-          'Implemented CI/CD pipelines for both on-premises (IIS/Windows Servers) and cloud environments using Jenkins and AWS DevOps, accelerating software delivery.',
+          'Implemented CI/CD pipelines for both on-premises and cloud environments using Jenkins and AWS DevOps, accelerating software delivery.',
           'Managed Kubernetes clusters and containerized applications with Docker and Helm charts.',
-          'Monitored and optimized system performance with Prometheus, Grafana, and ELK stack.',
+          'Monitored and optimized system performance with Prometheus, Grafana.',
           'Collaborated with cross-functional teams to enhance deployment workflows, incident response, and IT operations.',
           'Ensured cloud resources are secure, compliant, and cost-efficient, integrating IAM, VPC, and Auto Scaling best practices.'
         ]
@@ -182,7 +182,9 @@ export const RESUME_DATA = {
 	projects: [
 		{
 		  title: 'Sample Flask App Full Pipeline',
-		  techStack: ['Python','k8s'],
+		  techStack: ['Python','k8s'GitHub (Code)','Docker (Containerization)','Jenkins (CI)','SonarQube (Quality)','Trivy (Filesystem Scan)',
+'ArgoCD (CD)','Redis (Caching)'],
+Helm (Monitoring using grafana and prometheus)],
 		  description: 'deploy python flask project on kubeadm using  jenkin Ci  pipeline  and Argocd CD.',
 		  link: {
 			label: 'Full jenkin Pipeline',
@@ -216,14 +218,16 @@ export const RESUME_DATA = {
 		  description: 'deploy python flask project on Docker, Docker Compose.',
 		  link: {
 			label: 'two-tier-flask-app',
-			href: 'https://github.com/LondheShubham153/two-tier-flask-app.git'
+			href: 'https://github.com/sanjaymewada/two-tier-flask-app.git'
 		  }
 		},
+		
 		
 		
 
 		
 	]			
 }
+
 
 
