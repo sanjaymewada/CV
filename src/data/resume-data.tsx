@@ -203,14 +203,15 @@ export const RESUME_DATA = {
 		},
 
 		{
-		  title: 'Infrastructure as Code: EC2 Launch with CloudFormation',
-		  techStack: ['EC2','ALB','Auto Scaling','Route 53','CloudWatch','SNS'],
-		  description: 'Designed a CloudFormation YAML template to launch both Linux and Windows EC2 instances.and Implemented User Data scripts to automatically install Docker on Linux and IIS on Windows during instance provisioning..',
-		  link: {
-			label: '',
-			href: ''
-		  }
-		},
+  title: 'Automated EC2 Infrastructure with CloudFormation',
+  techStack: ['CloudFormation', 'EC2', 'ALB', 'Auto Scaling', 'IAM', 'User Data', 'Linux', 'Windows'],
+  description: 'Created a single CloudFormation YAML template to launch both Linux and Windows EC2 instances. Integrated ALB and Auto Scaling for high availability. Used User Data to auto-install Docker on Linux and IIS on Windows. IAM roles and security groups were defined within the template for secure access. Designed the stack to be reusable across environments with parameters and mappings.',
+  link: {
+    label: '',
+    href: ''
+  }
+},
+
 
 
 		{
@@ -236,8 +237,8 @@ VS Code → Git → GitHub → Jenkins (CI) → Docker + DockerHub → SonarQube
 		},
 
 			{
-		  title: 'Lambda Scheduled EC2 Start/Stop Automation)',
-		  techStack: ['Lambda', 'EC2', 'CloudWatch Events', 'IAM',' Python (Boto3)'],
+		  title: 'Lambda Scheduled EC2 Start/Stop Automation',
+		  techStack: ['Lambda', 'EC2','CloudWatch Events','IAM',' Python (Boto3)'],
 		  description: 'Automated scheduled start/stop of EC2 instances using AWS Lambda (Python), triggered by CloudWatch Events to reduce costs during non-peak hours..',
 		  link: {
 			label: '',
@@ -295,6 +296,7 @@ VS Code → Git → GitHub → Jenkins (CI) → Docker + DockerHub → SonarQube
 		
 	]			
 }
+
 
 
 
