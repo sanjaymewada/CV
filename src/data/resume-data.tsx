@@ -192,8 +192,41 @@ export const RESUME_DATA = {
 			href: 'https://github.com/sanjaymewada/fullpipeline'
 		  }
 		},
+
+		{
+		  title: 'Prescripto - Doctor Appointment Web App',
+		  techStack: ['React.js','Node.js','Express.js','MongoDB'],
+		  description: 'Create docker file and docker compose and run in docker desktop.',
+		  link: {
+			label: 'Prescripto',
+			href: 'https://github.com/sanjaymewada/prescripto_full-stack_doctor_appointment_app.git'
+		  }
+		},
+
+		{
+		  title: 'Expenses-Tracker-WebApp',
+		  techStack: ['Java','Spring boot','Spring MVC','Spring Security','Spring Data (JPA)','MySQL','Thymeleaf','Bootstrap'],
+		  description: 'fork the project and run in local docker desktop environment.',
+		  link: {
+			label: 'Expenses-Tracker',
+			href: 'https://github.com/sanjaymewada/Expenses-Tracker-WebApp.git'
+		  }
+		},
+
+		{
+		  title: 'Two-tier-flask-app',
+		  techStack: ['Python + Flask',mysql],
+		  description: 'deploy python flask project on Docker, Docker Compose.',
+		  link: {
+			label: 'two-tier-flask-app
+',
+			href: 'https://github.com/LondheShubham153/two-tier-flask-app.git'
+		  }
+		},
+		
 		
 
 		
 	]			
 }
+
