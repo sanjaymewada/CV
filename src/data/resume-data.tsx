@@ -9,7 +9,7 @@ export const RESUME_DATA = {
     'DevOps & Cloud Engineer passionate about automation, scalability, and building reliable infrastructure that empowers development teams.',
   summary: `I specialize in DevOps, Cloud Computing, and Infrastructure Automation, with hands-on expertise in tools like Kubernetes, Terraform, Docker, and CI/CD pipelines. I design and implement cloud-native architectures that are scalable, secure, and resilient with a strong focus on efficiency and reliability.
     As an open-source contributor, I'm driven by a mission to bridge development and operations through automation, helping teams ship faster, safer, and smarter in the cloud.`,
-  avatar: '/assets/3726913.png',
+  avatar: '/assets/avatar.png',
 
   personalWebsiteUrl: {
     name: 'Portfolio',
@@ -230,3 +230,4 @@ export const RESUME_DATA = {
     }
   ]
 }
+
