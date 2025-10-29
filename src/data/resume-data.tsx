@@ -13,7 +13,7 @@ export const RESUME_DATA = {
 
   personalWebsiteUrl: {
     name: 'Portfolio',
-    url: 'https://personal-portfolio-red-nine.vercel.app/'
+    url: 'https://portfolio-xi-woad-64.vercel.app/'
   },
 
   contact: {
@@ -230,5 +230,6 @@ export const RESUME_DATA = {
     }
   ]
 }
+
 
 
